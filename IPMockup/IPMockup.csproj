@@ -175,12 +175,17 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\colpick.css" />
     <Content Include="Content\font-awesome-4.3.0\css\font-awesome.css" />
     <Content Include="Content\font-awesome-4.3.0\css\font-awesome.min.css" />
     <Content Include="Content\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\banner.png" />
     <Content Include="Content\images\btn.png" />
+    <Content Include="Content\images\carousel.png" />
+    <Content Include="Content\images\eiffeltower.jpg" />
+    <Content Include="Content\images\housesonmountains.jpg" />
     <Content Include="Content\images\logo2.png" />
+    <Content Include="Content\images\unsplash.jpg" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\jquery-ui.structure.min.css" />
     <Content Include="Content\jquery-ui.theme.min.css" />
@@ -282,6 +287,7 @@
     <Content Include="Content\font-awesome-4.3.0\scss\_rotated-flipped.scss" />
     <Content Include="Content\font-awesome-4.3.0\scss\_stacked.scss" />
     <Content Include="Content\font-awesome-4.3.0\scss\_variables.scss" />
+    <Content Include="Scripts\colpick.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
@@ -1078,6 +1084,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Editor\ViewProjects.cshtml" />
     <Content Include="Scripts\version.json" />
+    <Content Include="Views\Home\_Carousel.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
