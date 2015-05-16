@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPMockup", "IPMockup\IPMockup.csproj", "{49925F4D-9B26-49BD-8E58-C36F9B72C282}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F37FFDC7-454C-4124-B3C8-C6BAD325AC83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common.Contracts\Common.csproj", "{3CCDEE23-B43E-4F29-AB32-CA82548F7F38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{1DA82593-1473-4F8D-9974-E4B360CDAA84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{3CCDEE23-B43E-4F29-AB32-CA82548F7F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CCDEE23-B43E-4F29-AB32-CA82548F7F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CCDEE23-B43E-4F29-AB32-CA82548F7F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DA82593-1473-4F8D-9974-E4B360CDAA84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DA82593-1473-4F8D-9974-E4B360CDAA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DA82593-1473-4F8D-9974-E4B360CDAA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DA82593-1473-4F8D-9974-E4B360CDAA84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

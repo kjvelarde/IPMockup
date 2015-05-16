@@ -70,7 +70,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContracts\Group.cs" />
     <Compile Include="DataContracts\Page.cs" />
+    <Compile Include="DataContracts\Project.cs" />
+    <Compile Include="DataContracts\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
