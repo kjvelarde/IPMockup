@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPMockup", "IPMockup\IPMock
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F37FFDC7-454C-4124-B3C8-C6BAD325AC83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Contracts", "Common.Contracts\Common.Contracts.csproj", "{3CCDEE23-B43E-4F29-AB32-CA82548F7F38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common.Contracts\Common.csproj", "{3CCDEE23-B43E-4F29-AB32-CA82548F7F38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
