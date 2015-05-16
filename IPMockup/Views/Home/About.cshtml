@@ -1,7 +1,111 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
+<link href="~/Content/jquery-ui.theme.min.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/jquery-ui-1.11.4.js"></script>
 
-<p>Use this area to provide additional information.</p>
+<style>
+    ul > li {
+        list-style: none;
+    }
+    .abso {
+        position: absolute;
+    }
+
+</style>
+<div id="content" style="height: 500px; border: 1px solid black;" class="col-md-9">
+
+</div>
+<div class="col-md-3">
+    <ul>
+        <li>
+            <div class="btn btn-default element">BUTTON</div></li>
+        <li>
+            <div class="btn btn-success element">BUTTON</div></li>
+        <li>
+            <div class="btn btn-danger element">BUTTON</div></li>
+        <li>
+            <div class="btn btn-info element">BUTTON</div></li>
+        <li>
+            <div class="btn btn-warning element">BUTTON</div></li>
+        <li>
+            <div class="element">
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-list fa-fw"></i></span>
+                    <input type="text" class="form-control" placeholder="Enter Text">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="element">
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
+                    <input type="text" class="form-control" placeholder="(614)123-1234">
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="element">
+                <input type="radio" name="sex" value="1">Radio 1<br>
+                <input type="radio" name="sex" value="2">Radio 2
+            </div>
+        </li>
+
+
+    </ul>
+
+</div>
+
+
+
+
+<script>
+
+    $(function () {
+        $("#content").droppable({
+            accept: '.element',
+            drop: function (event, ui) {
+                $(this).append($(ui.draggable).clone());
+                $("#content .element").addClass("item abso");
+                $(".item").removeClass("ui-draggable element");
+                $(".item").draggable({
+                    containment: '#content'                   
+                });
+                $(".item").resizable({
+                    containment: '#content',
+                    maxHeight: 150,
+                    maxWidth: 250,
+                    grid: 20
+                });
+            }
+        });
+        $(".element").draggable({
+            helper: 'clone'
+        });
+        //$('.element').draggable({
+        //    containment: '#content',            
+        //    cursor: 'move',
+        //    snap: '#content',
+        //    grid: [20, 20],
+        //    connectToSortable: "#content",            
+        //    helper: 'clone',
+        //    revert:true
+        //});
+        //$("#content").disableSelection();
+    });   
+
+    //$(".element").click(function () {
+    //    $(this).clone().appendTo("#content");
+    //});
+
+    //function img_create(src, alt, title) {
+    //    var img = IEWIN ? new Image() : document.createElement('img');
+    //    img.src = src;
+    //    if (alt != null) img.alt = alt;
+    //    if (title != null) img.title = title;
+    //    $('#content').appendChild(img);
+    //}
+
+</script>
