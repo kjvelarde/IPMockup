@@ -13,7 +13,7 @@ namespace IPMockup.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Editor()
         {
             ViewBag.Message = "Your application description page.";
 
