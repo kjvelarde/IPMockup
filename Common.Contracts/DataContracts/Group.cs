@@ -5,15 +5,15 @@ using System.Web.Mvc;
 namespace Common.DataContracts
 {
     [DataContract]
-    public class Page
+    public class Group
     {
         [DataMember]
-        public int PageID { get; set; }
+        public int CreatorID { get; set; }
 
         [DataMember]
-        public int ProjectID { get; set; }
+        public string ProjectID { get; set; }
 
         [DataMember]
-        public string Elements { get; set; }
+        public int GroupID { get; set; }
     }
 }

@@ -2,18 +2,22 @@
 using System.Runtime.Serialization;
 using System.Web.Mvc;
 
+
 namespace Common.DataContracts
 {
     [DataContract]
-    public class Page
+    public class User
     {
         [DataMember]
-        public int PageID { get; set; }
+        public int UserID { get; set; }
 
         [DataMember]
-        public int ProjectID { get; set; }
+        public int GroupID { get; set; }
 
         [DataMember]
-        public string Elements { get; set; }
+        public string Username { get; set; }
+
+        [DataMember]
+        public string Password { get; set; }
     }
 }
