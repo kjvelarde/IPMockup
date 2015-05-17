@@ -11,6 +11,9 @@
         body {
             font-family: 'Oswald', sans-serif;
         }
+        a {
+            color: #A94442;
+        }
     </style>
 
     <link href="~/Content/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -34,10 +37,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                @if (User.IsInRole("User"))
-                {
-                     <li>@Html.ActionLink("Editor", "Editor", "Home")</li>
+               
+                @if (User.Identity.IsAuthenticated)
+                {   
+                     <li class="btn-danger">@Html.ActionLink("Editor", "Editor", "Home", null, new{@style="color:white"})</li>
                 }
                
                 @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
@@ -52,9 +55,9 @@
     </div>
 
     <hr/>
-    <footer>
+    <footer class="text-center">
         <p>
-            &copy; @DateTime.Now.Year - <a href="http://www.kjvelarde.com">Internally Positive</a>
+            &copy; @DateTime.Now.Year - <a href="http://www.kjvelarde.com" class="text-danger">Internally Positive</a>
         </p>
     </footer>
 </div>

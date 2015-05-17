@@ -182,9 +182,11 @@
     <Content Include="Content\images\banner.png" />
     <Content Include="Content\images\btn.png" />
     <Content Include="Content\images\carousel.png" />
+    <Content Include="Content\images\CREATE.png" />
     <Content Include="Content\images\eiffeltower.jpg" />
     <Content Include="Content\images\housesonmountains.jpg" />
     <Content Include="Content\images\logo2.png" />
+    <Content Include="Content\images\mock.png" />
     <Content Include="Content\images\unsplash.jpg" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\jquery-ui.structure.min.css" />
@@ -1085,6 +1087,7 @@
     <Content Include="Views\Editor\ViewProjects.cshtml" />
     <Content Include="Scripts\version.json" />
     <Content Include="Views\Home\_Carousel.cshtml" />
+    <Content Include="Views\Home\Main.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

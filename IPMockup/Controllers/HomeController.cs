@@ -10,13 +10,29 @@ namespace IPMockup.Controllers
     {
         public ActionResult Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Main");
+            }
             return View();
         }
 
         public ActionResult Editor()
         {
             ViewBag.Message = "Your application description page.";
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
 
+        public ActionResult Main()
+        {
+            if (!User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index");
+            }
             return View();
         }
 
