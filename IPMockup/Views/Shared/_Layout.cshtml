@@ -35,7 +35,11 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("Editor", "Editor", "Home")</li>
+                @if (User.IsInRole("User"))
+                {
+                     <li>@Html.ActionLink("Editor", "Editor", "Home")</li>
+                }
+               
                 @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
             </ul>
             @Html.Partial("_LoginPartial")
