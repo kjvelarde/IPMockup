@@ -6,7 +6,7 @@ using System.Web.Mvc;
 namespace Common.DataContracts
 {
     [DataContract]
-    class User
+    public class User
     {
         [DataMember]
         public int UserID { get; set; }

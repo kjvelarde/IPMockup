@@ -11,8 +11,6 @@ namespace Common.DataContracts
     {
         public int ProjectID { get; set; }
 
-        public int PageLinkID { get; set; }
-
         public int CreatorID { get; set; }
 
         public DateTime CreateDate { get; set; }

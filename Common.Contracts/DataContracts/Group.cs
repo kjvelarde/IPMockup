@@ -8,9 +8,12 @@ namespace Common.DataContracts
     public class Group
     {
         [DataMember]
-        public int PageID { get; set; }
+        public int CreatorID { get; set; }
 
         [DataMember]
-        public string Elements { get; set; }
+        public string ProjectID { get; set; }
+
+        [DataMember]
+        public int GroupID { get; set; }
     }
 }

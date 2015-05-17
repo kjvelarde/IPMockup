@@ -8,10 +8,10 @@ namespace Common.DataContracts
     public class Page
     {
         [DataMember]
-        public int ID { get; set; }
+        public int PageID { get; set; }
 
         [DataMember]
-        public string Title { get; set; }
+        public int ProjectID { get; set; }
 
         [DataMember]
         public string Elements { get; set; }
