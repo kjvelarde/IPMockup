@@ -80,7 +80,7 @@
                     </div>
                 </li>
 
-                <li>                    
+                <li>
                     <div class="element">
                         <div class="panel panel-default">
                             <div class="panel-heading" data-ng-style="editorBGColor">
@@ -90,6 +90,30 @@
 
                     </div>
                 </li>
+
+                <li>
+                    <div>
+                        <style>
+                            .resizable {
+                                background-position: top left;
+                                width: 90px;
+                                height: 90px;
+                                border: black;
+                            }
+                        </style>
+                        <div class="ui-state-active element resizable">
+                            <h3 class="ui-widget-header" style="border: black; background: gray;" data-ng-style="editorBGColor">Header</h3>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <div class="ui-state-active element resizable" data-ng-style="editorBGColor" style="background: gray">                         
+                        </div>
+                    </div>
+                </li>
+
 
                 <hr />
 
@@ -135,11 +159,11 @@
                 <li>
                     <label class="control-label">Dropdown</label>
                     <div class="element">
-                        <select disabled="disabled">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
+                        <select class="element">
+                            <option value="volvo">-Select All-</option>
+                            <option value="saab">Option 1</option>
+                            <option value="mercedes">Option 2</option>
+                            <option value="audi">Option 3</option>
                         </select>
                     </div>
                 </li>
@@ -148,8 +172,11 @@
                     <label class="control-label">Checkbox</label>
                     <div class="element">
                         <input type="checkbox" name="" value="" data-ng-style="editorTextSize"> Yes<br>
+                        <input type="checkbox" name="" value="" data-ng-style="editorTextSize"> No
                     </div>
                 </li>
+
+             
 
 
             </ul>
@@ -159,14 +186,12 @@
 
 </div>
 
-<div id="remove" class="btn btn-default">delete</div>
-
 
 
 <script>
-    $("#remove").click(function (e) {
-        $(this).closest(".element").remove();
-        e.preventDefault();
+    $(".remove").click(function (e) {
+        e.remove();
+
     });
 
     $('.color').colpick({
@@ -182,11 +207,16 @@
     });
 
     $(function () {
+        $(document).on('click', '.remove',
+        function () {
+                $(this).remove();
+        });
+
         $("#content").droppable({
             accept: '.element',
             drop: function (event, ui) {
                 $(this).append($(ui.draggable).clone());
-                $("#content .element").addClass("item abso");
+                $("#content .element").addClass("item abso remove");
                 $(".item").removeClass("ui-draggable element");
                 $(".item").draggable({
                     containment: '#content'
